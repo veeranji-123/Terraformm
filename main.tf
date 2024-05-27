@@ -2,8 +2,6 @@
 #provider.tf
 provider "aws" {
 region = "us-east-1"
-access_key = "AKIA6PYMQHC6V6X4EWJS"
-secret_key = "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"
 
 }
 
