@@ -1,6 +1,6 @@
 #!/bin/bash
 sudo yum install git -y
-sudo git clone https://github.com/sumanthgangireddyGS/car-prediction.git
+sudo git clone https://github.com/1s2r3i4n5u/car-prediction.git
 cd /
 cd car-prediction/
 sudo yum install python3 python3-pip -y
