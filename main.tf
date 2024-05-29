@@ -1,7 +1,7 @@
 provider "aws" {
-  region     = "us-west-2"
-  access_key = "AKIAZQ3DT3QH7HRYOBFK"
-  secret_key = "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"
+  region     = "us-west-1"
+  access_key = "AKIAZEGRK4EUND5TN4CS"
+  secret_key = "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"
 }
 
 #vpc.tf
@@ -17,7 +17,7 @@ resource "aws_vpc" "main" {
 resource "aws_subnet" "main" {
   vpc_id            = aws_vpc.main.id
   cidr_block        = var.subnet_cidr
-  availability_zone = "us-west-2a"
+  availability_zone = "us-west-1b"
   tags = {
     Name = "subnet1"
   }
@@ -107,7 +107,7 @@ variable "subnet_cidr" {
 
 # Creating EC2 instance
 resource "aws_instance" "wordpress_instance" {
-  ami                         = "ami-06efb824bfe850db6" # Amazon Linux 2 AMI
+  ami                         = "ami-0fed225bf766d950c" # Amazon Linux 2 AMI
   instance_type               = "t2.micro"
   count                       = 1
   key_name                    = "321321"
