@@ -1,9 +1,7 @@
 
 #provider.tf
 provider "aws" {
-  region    = "us-west-1"
-access_key  ="AKIAWTG7YHDN53EN3CWT"
-secret_key  ="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"  
+  region    = "us-west-2"  
 }
 
 #vpc.tf
@@ -19,7 +17,7 @@ resource "aws_vpc" "main" {
 resource "aws_subnet" "main" {
   vpc_id            = aws_vpc.main.id
   cidr_block        = var.subnet_cidr
-  availability_zone = "us-west-1a"
+  availability_zone = "us-west-2a"
   tags = {
     Name = "subnet1"
   }
