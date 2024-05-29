@@ -1,7 +1,7 @@
 provider "aws" {
-  region     = "us-east-1"
-  access_key = ""
-  secret_key = ""
+  region     = "us-west-2"
+  access_key = "AKIAZQ3DT3QH55SHFLES"
+  secret_key = "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"
 }
 
 #vpc.tf
@@ -110,7 +110,7 @@ resource "aws_instance" "wordpress_instance" {
   ami                         = "ami-0d94353f7bad10668"
   instance_type               = "t2.micro"
   count                       = 1
-  key_name                    = "789365"
+  key_name                    = "143143"
   vpc_security_group_ids      = ["${aws_security_group.python_sg.id}"]
   subnet_id                   = aws_subnet.main.id
   associate_public_ip_address = true
