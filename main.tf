@@ -107,7 +107,7 @@ variable "subnet_cidr" {
 
 # Creating EC2 instance
 resource "aws_instance" "wordpress_instance" {
-  ami                         = "ami-06efb824bfe850db6"
+  ami                         = "ami-06efb824bfe850db6" # Amazon Linux 2 AMI
   instance_type               = "t2.micro"
   count                       = 1
   key_name                    = "143143"
