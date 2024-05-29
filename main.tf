@@ -106,10 +106,10 @@ variable "subnet_cidr" {
 
 # Creating EC2 instance
 resource "aws_instance" "wordpress_instance" {
-  ami                         = ""ami-0cbe318e714fc9a82
+  ami                         = "ami-0d94353f7bad10668"
   instance_type               = "t2.micro"
   count                       = 1
-  key_name                    = "12121212"
+  key_name                    = "143143"
   vpc_security_group_ids      = ["${aws_security_group.python_sg.id}"]
   subnet_id                   = aws_subnet.main.id
   associate_public_ip_address = true
@@ -118,7 +118,6 @@ resource "aws_instance" "wordpress_instance" {
     Name = "Python_Instance"
   }
 }
-
 
 output "public_ip" {
   value = aws_instance.wordpress_instance[*].public_ip
